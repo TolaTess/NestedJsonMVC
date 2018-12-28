@@ -1,5 +1,7 @@
 package com.example.tolaotesanya.nestedjsonmvc.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -14,7 +16,7 @@ public class MovieModel {
     private String duration;
     private String director;
     private String tagline;
-    //Since Cast is a Jsonarray, a list is needed to get each cast field (name)
+    @SerializedName("cast") // name according to the json file
     private List<Cast> castList;
     private String image;
     private String story;
